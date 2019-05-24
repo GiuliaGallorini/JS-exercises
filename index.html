@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JS exercises</h2>
+
+<script>
+
+// var text = "";
+// var i = 0;
+// while (i < 10) {
+//   text += "<br>The number is " + i;
+//   i++;
+// }
+
+// var i = 10;
+// while (i >= 0) {
+//     console.log(i)
+//     i -= 1;
+// }
+
+// let counter = 0;
+// while (counter <= 10){
+//   console.log(counter);
+//   counter += 1;
+// } 
+
+// var n = 0;
+// while (n < 3) {
+//   n++;
+// }
+// console.log(n);
+
+// var n = 0;
+// var x = 0;
+// while (n < 3) {
+//   n++;
+//   x = x + n;
+// }
+// console.log(n, x)
+// console.log('the value of n is ' + n)
+// console.log('while the value of x is ' + x)
+
+// for (let i = 0; i < 9; i++) {
+//     console.log(i);
+// }
+
+// for (let i = ""; i.length <= 10; i += "*") {
+//     console.log(i);
+// }
+
+// for (let i = 10; i >= 0; i--) {
+//     console.log(i);
+// } console.log("Boom!");
+
+// const statement = "We are in Ironhack"
+// for(let i = 0; i < 10; i++) {
+//   if (i % 2 === 0) {
+//     let x = 0;
+    
+//     while (x < statement.length) {
+//       let letter = statement[x];
+//       if (letter === "a") {
+//         console.log(i + " Cheers!")
+//       }
+//       x++;
+//     }
+//   }
+// }
+
+// for (let i = 1; i <= 30; i++){
+//   if (i === 21){
+//     console.log("TWENTY ONE! Black Jack, dale!");
+//     break;
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+// for (var i = 1; i < 21; i++){
+//   console.log(i);
+// }
+// console.log("TWENTY ONE! BlackJack.")
+
+// for (let i = 1; i <= 30; i++){
+//   if (i % 3 === 0) { 
+//     continue; 
+//   }
+//   console.log(i);
+// }
+
+// for (let i = 1; i <= 50; i++) {
+//     if (i % 7 === 0) {continue;}
+//     else if (i % 10 === 0 || i % 15 === 0) console.log("Donkey!");
+//     else if (i % 2 !== 0 && (i-1) % 10 === 0) console.log("Monkey!");
+//     else console.log(i);
+// }
+
+// const animalArray = ["dog", "cat", "fish"];
+// const myCat = animalArray[1];
+// console.log(myCat);
+
+// const animalArray = ["dog", "cat", "fish"];
+// const lastIndex = animalArray.length - 1;
+// const lastElement = animalArray[lastIndex];
+// console.log(lastIndex);
+
+// var animal = ["dog", "cat", "fish"];
+// console.log(`${animal}`);
+// animal.push("lizard");
+// console.log(`${animal}`);
+
+// const animalArray = ["dog", "cat", "fish"];
+// console.log(`Before: ${animalArray}`);
+// animalArray.push("lizard");
+// console.log(`After: ${animalArray}`);
+
+// var animal = ["dog", "cat", "fish"];
+// animal.push("lizard");
+// console.log(`${animal}`);
+// animal[2] = "turtle";
+// console.log(`${animal}`);
+// animal[3] = "snake";
+// console.log(`${animal}`);
+// animal[7] = "pig";
+// console.log(`${animal}`);
+// animal[4] = "sheep";
+// console.log(`${animal}`);
+// animal[5] = "rooster";
+// console.log(`${animal}`);
+// animal[6] = "hamster";
+// console.log(`${animal}`);
+// animal[2] = "fish";
+// console.log(`${animal}`);
+// animal[8] = "turtle";
+// console.log(`${animal}`);
+
+// var animal = ["dog", "cat", "fish"];
+// console.log(`${animal}`);
+// animal.unshift("whale");
+// console.log(`${animal}`);
+
+// var animal = ["dog", "cat", "fish"];
+// delete animal[0];
+// console.log(`${animal}`);
+
+// var animalArray = ["dog", "cat", "fish", "lizard", "whale", "cheetah"];
+// console.log(`Original: ${animalArray}`); 
+// console.log("------");
+// animalArray.splice(0, 1);
+// console.log(`From the first element, remove one going forward: ${animalArray}`);
+// animalArray.splice(2, 2);
+// console.log(`From the second element, remove two going forward: ${animalArray}`);
+// animalArray.splice(0, 1, "Something else");
+// console.log(`If we pass a third argument: ${animalArray}`);
+
+// var animal = ["dog", "cat", "fish", "lizard", "whale", "cheetah"];
+// console.log(`${animal}`);
+// animal.push ("rooster", "turtle");
+// console.log(`${animal}`);
+// animal.splice(0,2);
+// console.log(`${animal}`);
+// animal.splice(5, 1, "last");
+// console.log(`${animal}`);
+
+// var animal = ["dog", "cat", "fish"];
+// for (let i = 0; i < animal.length; i++) {
+//   console.log(`Index: ${i} - element: ${animal[i]}`);
+// }
+
+// let counter = 0;
+// const animal = ["dog", "cat", "fish"];
+// while (counter < animal.length){
+//   console.log(`Index: ${counter} - element: ${animal[counter]}`);
+//   counter++;
+// }
+
+// const animalArray = ["dog", "cat", "fish"];
+// // option 1:
+// // animal is just a placeholder, can be any word
+// animalArray.forEach(function(animal){
+//   console.log(`option 1: ${animal}`);
+// });
+// // option 2:
+// // arrayElement is just a placeholder, can be any word
+// animalArray.forEach(arrayElement => {
+//   console.log(`option 2: ${arrayElement}`);
+// });
+
+// const favouriteFood =["pizza", "pasta", "gelato"];
+// favouriteFood.forEach(function(food){
+//     console.log(`list 1: ${food}`);
+// });
+
+let sum = 0;
+const numbers = [2, 3, 6, 1, 7, 10];
+
+for (let i = 0; i < numbers.length; i++) {
+  console.log(`+ ${numbers[i]}`);
+}
+
+console.log(`The length is: ${numbers.length - 1}`);
+
+var sum = numbers[0] + numbers[1] + numbers[2] + numbers[3] + numbers[4] + numbers[5];
+/* fill in conditions here to iterate over array */
+// Add each number in the array to the sum
+
+
+// Log the sum
+console.log(sum);
+
+
+</script>
+
+</body>
+</html>
