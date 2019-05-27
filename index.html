@@ -192,22 +192,266 @@
 //     console.log(`list 1: ${food}`);
 // });
 
-let sum = 0;
-const numbers = [2, 3, 6, 1, 7, 10];
+// let sum = 0;
+// const numbers = [2, 3, 6, 1, 7, 10];
+// for (let i = 0; i < numbers.length; i++) {
+//     sum += (numbers[i]);
+// }
+// console.log(sum);
 
-for (let i = 0; i < numbers.length; i++) {
-  console.log(`+ ${numbers[i]}`);
+
+// let sum = 0;
+// const numbers = [1, 7, 4, 11, 16, 10];
+// for (let i = 0; i < numbers.length; i++) {
+//     console.log(sum += (numbers[i]));
+//     // IF CONSOLE.LOG IS INSIDE, IT WRITES ALL THE NUMBERS
+// }
+//   // IF CONSOLE IS OUTSIDE, IT WRITES ONLY THE RESULT
+// console.log(sum);
+// // AVERAGE
+// let average = sum/numbers.length;
+// console.log(average);
+// // OR ALSO
+// console.log(average = sum/numbers.length);
+
+// var currentLargest = 0;
+// const numbers = [10, 16, 99, 0, 52, 41, 7];
+// for (i = 0; i <= currentLargest; i++) {
+//         if (numbers[i] > currentLargest) {
+//             var currentLargest = numbers[i]
+//         }
+// } 
+// console.log(`The largest number is: ${currentLargest}`);
+// // i do not understad why it works with var and not with let
+
+// FUNCTIONS
+// function sayHello(){
+//   console.log("Hello World");
+// }
+// sayHello();
+
+// function calculator () {
+//   let result = multiplyNumbers(4,7);
+//   console.log(`The result is ${result}.`);
+// }
+// function sumNumbers (num1, num2) {
+//   return num1 + num2;
+// }
+// function multiplyNumbers (a, b) {
+//   return a * b;
+// }
+// calculator();
+
+// function sumNumbers(numberOne, numberTwo) {
+//   return numberOne + numberTwo;
+// }
+// var result = sumNumbers(2,2);
+// console.log("The result is " + result);
+
+// var result = sumNumbers(1,9);
+// console.log("The result is " + result);
+
+// var animalArray = ["Dog", "Fish", "Cat"];
+// function printLength(arrayToCount){
+//   var theLength = arrayToCount.length;
+//   console.log("The length of your array is " + theLength);
+// }
+// printLength(animalArray);
+
+// // Declaring a global variable
+// var company = "Ironhack";
+// function sayHello(){
+//   var firstName = "Josh";
+//   console.log("Name inside of the function: " + firstName);
+//   console.log("We are in a " + company + " course.");
+// }
+// sayHello();
+// console.log(company);
+// // Throws an error because there's no variable firstName in scope
+// console.log(firstName);
+
+// function printName(name) {
+//   console.log(name);
+// }
+
+// function printName(name) {
+//   var name = "The value";
+//   console.log(name);
+// }
+
+// var city = "Madrid";
+// function printCityName (city) {
+//   // It will print "Miami" since it is declared the local scope as an argument.
+//   console.log(city);
+// }
+// printCityName("Miami");
+// function printCityName2 () {
+//   // It will print "Madrid" since it has no variables in the local scope with that reference.
+//   console.log(city);
+// }
+// printCityName2();
+// console.log(city);
+
+// var country="Italy";
+// function printCountryName (country) {
+//     console.log(country);
+// }
+// printCountryName("Portugal");
+// function printCountryName2 () {
+//     console.log(country);
+// }
+// printCountryName2();
+// console.log(country);
+
+// const square = function(x) {
+//   return x * x;
+// };
+// console.log(square(12));
+
+// const square = function(x) {
+//     return x * x;
+// };
+// console.log(square(2))
+
+// // NO PARAMETER
+// const makeNoise = function() {
+//   console.log("Pling!");
+// };
+// makeNoise();
+
+// // TWO PARAMETERS
+// const power = function(base, exponent) {
+//   let result = 1;
+//   for (let count = 0; count < exponent; count++) {
+//     result *= base;
+//   }
+//   return result;
+// };
+// console.log(power(2, 10));
+// // OR SIMPLY EXPONENTIATION with same result...
+// console.log(2**10);
+
+// let x = 10;
+// if (true) {
+//   let y = 20;
+//   var z = 30;
+//   console.log(x + y + z);
+// }
+// // y is not visible here
+// console.log(x + z);
+
+// const halve = function(n) {
+//   return n / 2;
+// };
+// let n = 10;
+// console.log(halve(100));
+// // → 50
+// console.log(n);
+// // → 10
+
+// function stampa(t){
+//     console.log(t);
+// }
+// stampa("Pippo");
+// stampa("Pluto");
+
+// function stampaDoppio (n) {
+// var d = n * 2;
+//     console.log("Doppio di "+n+" è "+d+".");
+// }
+// stampaDoppio(4); //-> Doppio di 4 è 8
+// stampaDoppio(12); //-> Doppio di 12 è 24
+// stampaDoppio(56); //-> Doppio di 56 è 112
+// stampaDoppio(99765); //-> Doppio di 99765 è 199530
+
+// function stampaTriplo (g) {
+//     var h = g * 3;
+//     console.log("Triplo di "+g+" è "+h+".");
+// }
+// stampaTriplo(prompt("Digita il numero: "));
+
+// function stampaSomma(a,b) {
+//     var r = a + b;
+//     console.log("Somma: "+r+".");
+// }
+// stampaSomma(10,5); //-> Somma: 15
+// stampaSomma(6785,4325); //-> Somma: 11110
+// stampaSomma(69); //-> Somma: NaN
+
+// function somma(a,b) {
+//     var s = a + b;
+//     return s; 
+// }
+// console.log("Somma: "+somma(1,5)+"."); //-> Somma: 6
+
+// var numero = 10;
+// function raddoppia() {
+//     numero = numero * 2;
+//     console.log("Doppio: "+numero+".");
+// }
+// raddoppia(); //-> Doppio: 20
+// raddoppia(); //-> Doppio: 40
+// raddoppia(); //-> Doppio: 80
+
+// // Sposto la dichiarazione della variabile "numero"
+// // all'interno della funzione "raddoppia"
+// function raddoppia() {
+//     var numero = 10;
+//     numero = numero * 2;
+//     console.log("Doppio: "+numero+".");
+// }
+// raddoppia(); //-> Doppio: 20
+// raddoppia(); //-> Doppio: 20
+// raddoppia(); //-> Doppio: 20
+
+// // IMP posso avere il valore di una variabile fuori
+// // da una funzione richiamandola con "return"
+// function raddoppia() {
+//     var numero = 10;
+//     numero = numero * 2;
+//     console.log("Doppio: "+numero+".");
+//     return numero;
+// }
+// var n = raddoppia();
+// console.log("N: "+n+".");
+
+function addNumbers(numberOne, numberTwo) {
+  return numberOne + numberTwo;
 }
+var result = addNumbers(7,9);
+console.log("The result is " + result);
 
-console.log(`The length is: ${numbers.length - 1}`);
+function subtractNumbers(numberOne, numberTwo) {
+  return numberOne - numberTwo;
+}
+var result = subtractNumbers(9,7);
+console.log("The result is " + result);
 
-var sum = numbers[0] + numbers[1] + numbers[2] + numbers[3] + numbers[4] + numbers[5];
-/* fill in conditions here to iterate over array */
-// Add each number in the array to the sum
+function multiplyNumbers(numberOne, numberTwo) {
+    return numberOne * numberTwo;
+}
+var result = multiplyNumbers(6,4);
+console.log("The result is " + result);
+
+function divideNumbers(numberOne, numberTwo) {
+    return numberOne / numberTwo;
+}
+var result = divideNumbers(9,2);
+console.log("The result is " + result);
 
 
-// Log the sum
-console.log(sum);
+function calculator(numberOne, numberTwo, operation) {
+    if (operation == "+" || "addition")
+        console.log(addNumbers());
+    else if (operation == "-" || "subtraction")
+        console.log(subtractNumbers());
+    else if (operation == "*" || "multiplication")
+        console.log(multiplyNumbers());
+    else (operation == "/" || "division")
+        console.log(divideNumbers());
+}
+var result = calculator(4,5,"addition");
+    console.log(result);
 
 
 </script>
