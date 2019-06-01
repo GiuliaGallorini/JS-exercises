@@ -415,43 +415,49 @@
 // var n = raddoppia();
 // console.log("N: "+n+".");
 
-// function addNumbers(numberOne, numberTwo) {
-//   return numberOne + numberTwo;
-// }
-// var result = addNumbers(7,9);
-// console.log("The result is " + result);
+// EXERCISE FUNCTIONS
+function addNumbers(numberOne, numberTwo) {
+  return numberOne + numberTwo;
+}
+var result = addNumbers(7,9);
+console.log("The result is " + result);
 
-// function subtractNumbers(numberOne, numberTwo) {
-//   return numberOne - numberTwo;
-// }
-// var result = subtractNumbers(9,7);
-// console.log("The result is " + result);
+function subtractNumbers(numberOne, numberTwo) {
+  return numberOne - numberTwo;
+}
+var result = subtractNumbers(9,7);
+console.log("The result is " + result);
 
-// function multiplyNumbers(numberOne, numberTwo) {
-//     return numberOne * numberTwo;
-// }
-// var result = multiplyNumbers(6,4);
-// console.log("The result is " + result);
+function multiplyNumbers(numberOne, numberTwo) {
+    return numberOne * numberTwo;
+}
+var result = multiplyNumbers(6,4);
+console.log("The result is " + result);
 
-// function divideNumbers(numberOne, numberTwo) {
-//     return numberOne / numberTwo;
-// }
-// var result = divideNumbers(9,2);
-// console.log("The result is " + result);
+function divideNumbers(numberOne, numberTwo) {
+    return numberOne / numberTwo;
+}
+var result = divideNumbers(9,2);
+console.log("The result is " + result);
 
 
-// function calculator(numberOne, numberTwo, operation) {
-//     if (operation == "+" || "addition")
-//         console.log(addNumbers());
-//     else if (operation == "-" || "subtraction")
-//         console.log(subtractNumbers());
-//     else if (operation == "*" || "multiplication")
-//         console.log(multiplyNumbers());
-//     else (operation == "/" || "division")
-//         console.log(divideNumbers());
-// }
-// var result = calculator(4,5,"addition");
-//     console.log(result);
+function calculator(numberOne, numberTwo, operation) {
+    if (operation === "+" || "addition") {
+        return addNumbers(numberOne, numberTwo)
+      }
+    else if (operation === "-" || "subtraction")
+        return subtractNumbers(numberOne, numberTwo);
+    else if (operation === "*" || "multiplication")
+        return multiplyNumbers(numberOne, numberTwo);
+    else (operation === "/" || "division")
+        return divideNumbers(numberOne, numberTwo);
+}
+var result = calculator(4,5,"addition");
+    console.log(result);
+
+var resultTwo = calculator(8, 4, "subtraction");
+console.log(resultTwo);
+
 
 
 // // OBJECTS
@@ -505,18 +511,18 @@
 //     console.log("The value of " + recordName + " is " + olympicRecords[recordName]);
 // }
 
-//BATTLESHIP EXERCISE
-// The Battleship board is a 5x5 matrix
-// contains "S" for ship
-// "null" for empty space
+// //BATTLESHIP EXERCISE
+// // The Battleship board is a 5x5 matrix
+// // contains "S" for ship
+// // "null" for empty space
 
-var board = [
-    [null, null, null, "S", null],
-    [null, "S", null, "S", null],
-    ["S", null, null, null, null],
-    [null, "S", null, null, null],
-    [null, null, null, null, "S"]
-];
+// var board = [
+//     [null, null, null, "S", null],
+//     [null, "S", null, "S", null],
+//     ["S", null, null, null, null],
+//     [null, "S", null, null, null],
+//     [null, null, null, null, "S"]
+// ];
 
 // var firstRow = board[0];
 // console.log("First Row: " + firstRow);
@@ -589,25 +595,216 @@ var board = [
 //     return Math.floor(Math.random() * 5);
 // }
 
-// UPDATE THE BOARD
-// if we guess a square that contains a ship, then we should replace
-// that square with null, because we have sunk the ship. 
-// If no hits show up, try refreshing the page, it just means we were
-// unlucky that round.
-for (var i = 0; i < 10; i++) {
-    var row = getRandomNum();
-    var column = getRandomNum();
+// // UPDATE THE BOARD
+// // if we guess a square that contains a ship, then we should replace
+// // that square with null, because we have sunk the ship. 
+// // If no hits show up, try refreshing the page, it just means we were
+// // unlucky that round.
+// for (var i = 0; i < 10; i++) {
+//     var row = getRandomNum();
+//     var column = getRandomNum();
 
-    var randomSquare = board[row][column];
+//     var randomSquare = board[row][column];
 
-    if (randomSquare === "S") {
-        console.log("Hit on: " + row + ", " + column);
-        board[row][column] = null;
-    }
-}
-function getRandomNum() {
-    return Math.floor(Math.random() * 5);
-}
+//     if (randomSquare === "S") {
+//         console.log("Hit on: " + row + ", " + column);
+//         board[row][column] = null;
+//     }
+// }
+// function getRandomNum() {
+//     return Math.floor(Math.random() * 5);
+// }
+
+// // W3 SCHOOL
+// var x = 3;
+// var y = 5;
+// var z = x + y;
+// alert(z);
+
+
+// let year = prompt('In which year was EcmaScript-2015 specification published?');
+
+// if (year == 2015) alert ('You are right!');
+
+// if (year == 2015) {
+//     alert("That's correct!");
+//     alert("You're so smart!");
+// }
+
+// if (year == 2015) {
+//     alert('You guessed it right!');
+// } else {
+//     alert('How can you be so wrong?');
+// }
+
+// if (year < 2015) {
+//     alert('Too early...');
+// } else if (year > 2015) {
+//     alert('Too late');
+// } else {
+//     alert('Exactly!');
+// }
+
+// let age = prompt('How old are you?', '');
+// let accessAllowed;
+// if (age > 18) {
+//     accessAllowed = true;
+// } else {
+//     accessAllowed = false;
+// }
+// alert(accessAllowed);
+// // The same could be expressed with the ternaty operator '?'
+// let age = prompt('How old are you?', '');
+// let accessAllowed = (age > 18) ? true : false;
+// alert(accessAllowed);
+// // Or even shorter, because the comparison itself returns true/false
+// let age = prompt('How old are you?', '');
+// let accessAllowed = age > 18;
+// alert(accessAllowed);
+
+// let age = prompt('age?', 18);
+// let message = (age < 3) ? 'Hi, baby!' :
+//     (age < 18) ? 'Hello!' :
+//     (age < 100) ? 'Greetings!' :
+//     'What an unusual age!';
+// alert( message );
+// // The same using if...else:
+// let age = prompt('age?', 18);
+// if (age < 3) {
+//     message = 'Hi baby!';
+// } else if (age < 18) {
+//     message = 'Hello!';
+// } else if (age < 100) {
+//     message = 'Greetings!';
+// } else {
+//     message = 'What an unusual age!';
+// }
+// alert( message );
+
+// let company = prompt('Which company created JavaScript?', '');
+// if (company == 'Netscape') {
+//     alert('Right!');
+// } else {
+//     alert('Wrong.');
+// }
+
+// if ("0") {
+//     alert( 'Hello' );
+// }
+
+// let name = prompt('What is the "official" name of JavaScript?', '');
+// if (name == 'ECMAScript') {
+//     alert('Right!');
+// } else {
+//     alert('You do not know? "ECMAScript"!');
+// }
+
+// let number = prompt('Give me a number');
+// if (number > 0) {
+//     alert(1);
+// } else if (number < 0) {
+//     alert(-1);
+// } else {
+//     alert(0);
+// }
+
+// // FUNCTIONS FROM JAVASCRIPT.INFO
+// function showMessage() {
+//     alert('Hello everyone!');
+// }
+// showMessage();
+// showMessage();
+
+// function showMessage() {
+//     let message = "Hello, I'm Javascript!";
+//     alert(message);
+// }
+// showMessage();
+
+// // A function can access an outer variable
+// let userName = prompt('Type your name:', '');
+// function showMessage () {
+//     let message = 'Hello, ' + userName;
+//     alert(message);
+// }
+// showMessage();
+
+// // A function has full access to the outer variable
+// // and it can modify it as well
+// let userName = 'John';
+// function showMessage() {
+//     userName = 'Bob';
+//     let message = 'Hello, ' + userName;
+//     alert(message);
+// }
+// alert(userName); // John
+// // Before the function call
+// showMessage(); // Hello, Bob
+// // The function is called/executed
+// alert(userName); // Bob
+// // The value was modified by the function
+
+// // The outer variable is used only if there is no local one
+// let userName = 'John';
+// function showMessage() {
+//     let userName = 'Bob';
+//     let message = 'Hello, ' + userName;
+//     alert(message);
+// }
+// showMessage(); // Hello, Bob
+// alert(userName); // John
+// // unchanged, the function did not access the outer variable
+
+// // PARAMETERS
+// function showMessage(from, text) {
+//     alert(from + ': ' + text);
+// }
+// showMessage('Ann', 'Hello!');
+// showMessage('Ann', "What's up?");
+// // When the function is called, the given values are copied to local
+// // variables from and text, and the function uses them.
+
+// function showMessage(from, text) {
+//     from = '*' + from + '*';
+//     alert(from + ': ' + text);
+// }
+// let from = 'Ann';
+// showMessage(from, 'Hello!'); // *Ann*: Hello!
+// alert(from); // Ann
+
+// // If a paramenter is not provided, its value becomes 'undefined'
+// // by default.
+// // We can specify a default text that will be used if the parameter
+// // is not provided.
+// function showMessage(from, text = 'no text given') {
+//     alert(from + ': ' + text);
+// }
+// showMessage('Ann'); // Ann: no text given
+// showMessage('Ann', 'Hello!'); // Ann: Hello!
+
+// // RETURNING A VALUE
+// function sum(a, b) {
+//     return a + b;
+// }
+// let result = sum(1, 2);
+// alert(result);
+
+// // THIS FUNCTION IS VERY INTERESTING
+// function checkAge(age) {
+//     if (age > 18) {
+//         return true;
+//     } else {
+//         return confirm('Do you have permission from your parents?');
+//     }
+// }
+// let age = prompt('How old are you?', 18);
+// if (checkAge(age)) {
+//     alert('Access granted');
+// } else {
+//     alert('Access denied');
+// }
+
+
 
 
 </script>
